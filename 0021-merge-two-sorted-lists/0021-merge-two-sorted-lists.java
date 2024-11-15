@@ -8,11 +8,13 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+public class Solution {
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode root = new ListNode();
         ListNode tail = root;
+
+        // Loop through both lists while neither is null
         while (list1 != null && list2 != null) {
             if (list1.val < list2.val) {
                 tail.next = list1;
@@ -23,7 +25,16 @@ class Solution {
             }
             tail = tail.next;
         }
-        tail.next = list1 != null ? list1 : list2;
+        
+        //Checking if the two lists are empty
+        if (list1 != null) {
+            tail.next = list1;  
+        } else {
+            tail.next = list2; 
+        }
+
+        // Return the merged list starting from the node next to the dummy root node
         return root.next;
+       
     }
 }
