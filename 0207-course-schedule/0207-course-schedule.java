@@ -27,7 +27,7 @@ class Solution {
         if(visit[node]){
             return false;
         }
-        //Mark the current node as visited and part of current recursion
+        // mark The current node as visited and part of current recursion
         
         visit[node] = true;
         inStack[node] = true;
