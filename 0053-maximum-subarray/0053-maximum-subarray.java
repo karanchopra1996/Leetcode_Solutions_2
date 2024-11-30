@@ -8,6 +8,6 @@ class Solution {
             maxSum = Math.max(maxSum, currentSum);                 // Update maxSum if currentSum is greater
         }
         
-        return maxSum;  // Return the maximum sum found
+        return maxSum;  // Returning the Max Sum found
     }
 }
